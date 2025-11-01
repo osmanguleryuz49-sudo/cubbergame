@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Turbo Cube Run 🎮</title>
+    <title>CUBBER RUN 🎮</title>
     <style>
         * {
             margin: 0;
@@ -197,7 +197,7 @@
         <button id="muteBtn">🔊</button>
         
         <div id="startScreen">
-            <h1>TURBO CUBE RUN</h1>
+            <h1>CUBBER RUN</h1>
             <div class="instructions">
                 🖥️ PC: ⬅️➡️ Hareket | SPACE Zıpla<br>
                 📱 Mobile: Kaydır | Dokun Zıpla
@@ -212,7 +212,7 @@
                 <h3>🏆 EN İYİLER</h3>
                 <div id="leaderboardList"></div>
             </div>
-            <div id="shareText">🎮 "Turbo Cube Run'da X puan yaptım! Sen de dene!"</div>
+            <div id="shareText">🎮 "CUBBER RUN'da X puan yaptım! Sen de dene!"</div>
             <button class="btn" id="retryBtn">TEKRAR DENE</button>
             <button class="btn" id="copyBtn" style="background: linear-gradient(45deg, #4CAF50, #45a049);">SKORU KOPYALA</button>
         </div>
@@ -506,7 +506,7 @@
             saveHS();
             const s = Math.floor(game.score);
             document.getElementById('finalScore').textContent = `Skor: ${s}`;
-            document.getElementById('shareText').textContent = `🎮 "Turbo Cube Run'da ${s} puan yaptım! Sen de dene!"`;
+            document.getElementById('shareText').textContent = `🎮 "CUBBER RUN'da ${s} puan yaptım! Sen de dene! https://osmanguleryuz49-sudo.github.io/cubbergame/"`;
             showLB();
             document.getElementById('gameOverScreen').classList.remove('hidden');
         }
@@ -672,8 +672,8 @@
                 if (collision()) gameOver();
                 checkCoins();
                 
-                game.speed = 0.15 + game.score * 0.0002;
-                game.score += 0.15;
+                game.speed = 0.30 + game.score * 0.002;
+                game.score += 0.30;
                 updateUI();
                 player.rotation.y += 0.05;
             }
